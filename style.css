@@ -1,0 +1,118 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.homepage {
+    text-align: center;
+    font-weight: bold;
+}
+
+.homepage h1{
+    font-size: 5em;
+}
+
+.homepage #dbd_logo{
+    width: 50em;
+}
+
+.menu {
+    margin-top: 3em;
+    text-align: center;
+    
+    
+}
+
+a {
+    color:bisque;
+    
+}
+
+.menu a {
+    display: block; 
+}
+
+.center_title {
+    text-align: center;
+    margin-top: 1.5em;
+    font-size: 3em;
+}
+.center_title img {
+    display: block;
+    margin: 1.5em auto 0 auto;
+
+}
+
+.perk_grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 70em;
+    margin: 5em auto 0 auto;
+    counter-reset: perk_number;
+}
+
+.perk_grid img {
+    margin: 0 auto 0 auto;
+}
+
+
+.perk_grid h2::before {
+    counter-increment: perk_number;
+    content: counter(perk_number) ". ";
+}
+
+.paragraph_format {
+    max-width: 50em;
+    margin: 0 auto 0 auto;
+}
+
+#survey_box {
+    background-color: rgb(36, 36, 36);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1em;
+    width: 23em;
+}
+
+#survey_box label {
+    display: block;
+}
+
+#survey_box #submit_survey {
+    float: right;
+}
+
+.center_title #camping_bubba {
+    width: 15em;
+}
+
+.center_title #tunnel {
+    width: 15em;
+}
+
+.my_images {
+    width: 50em;
+    display: block;
+    margin-top: 3em;
+    margin-bottom: 1em
+}
+
+.center_images {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center_media_posts {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 34em;
+}
+
+.top_margin {
+    margin-top: 5em;
+}
+
+.endOfPage_margin {
+    margin-bottom: 5em;
+}
