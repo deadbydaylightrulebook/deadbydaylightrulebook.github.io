@@ -9,18 +9,16 @@ body {
 }
 
 .homepage h1{
-    font-size: 5em;
+    font-size: 5rem;
 }
 
 .homepage #dbd_logo{
-    width: 50em;
+    width: 50rem;
 }
 
 .menu {
-    margin-top: 3em;
-    text-align: center;
-    
-    
+    margin-top: 3rem;
+    margin-left: calc(50% - 5rem);
 }
 
 a {
@@ -30,24 +28,25 @@ a {
 
 .menu a {
     display: block; 
+    margin-bottom: 0.5rem;
 }
 
 .center_title {
     text-align: center;
-    margin-top: 1.5em;
-    font-size: 3em;
+    margin-top: 1.5rem;
+    font-size: 3rem;
 }
 .center_title img {
     display: block;
-    margin: 1.5em auto 0 auto;
+    margin: 1.5rem auto 0 auto;
 
 }
 
 .perk_grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    max-width: 70em;
-    margin: 5em auto 0 auto;
+    max-width: 70rem;
+    margin: 5rem auto 0 auto;
     counter-reset: perk_number;
 }
 
@@ -62,7 +61,7 @@ a {
 }
 
 .paragraph_format {
-    max-width: 50em;
+    max-width: 50rem;
     margin: 0 auto 0 auto;
 }
 
@@ -71,8 +70,8 @@ a {
     position: fixed;
     bottom: 0;
     right: 0;
-    padding: 1em;
-    width: 23em;
+    padding: 1rem;
+    width: 23rem;
 }
 
 #survey_box label {
@@ -84,18 +83,18 @@ a {
 }
 
 .center_title #camping_bubba {
-    width: 15em;
+    width: 15rem;
 }
 
 .center_title #tunnel {
-    width: 15em;
+    width: 15rem;
 }
 
 .my_images {
-    width: 50em;
+    width: 50rem;
     display: block;
-    margin-top: 3em;
-    margin-bottom: 1em
+    margin-top: 3rem;
+    margin-bottom: 1rem
 }
 
 .center_images {
@@ -106,13 +105,104 @@ a {
 .center_media_posts {
     display: grid;
     justify-content: center;
-    grid-template-columns: 34em;
+    grid-template-columns: 34rem;
 }
 
 .top_margin {
-    margin-top: 5em;
+    margin-top: 5rem;
 }
 
 .endOfPage_margin {
-    margin-bottom: 5em;
+    margin-bottom: 5rem;
 }
+
+.poll_question {
+    font-size: x-large;
+    margin-top: 4rem;
+    margin-left: 4rem;
+}
+
+.poll_options_container > div {
+    background-color: rgb(109, 109, 109);
+    margin-top: 1rem;
+    margin-left: 4rem;
+    width: 23rem;
+    position: relative;
+    z-index: 0;
+}
+
+.option_text {
+    padding: 1rem;
+}
+
+.poll_options_container > div:first-child {
+    margin-top: 2.5rem;
+}
+
+@keyframes expandWidth {
+    0% { width: 0; }
+}
+
+.filled_bar {
+    display: none;
+    position: absolute;
+    height: 100%;
+    background-color: rgb(168, 168, 168);
+    z-index: -1;
+}
+
+.poll_options_container > .selected_option {
+    background-color: rgb(95 , 0, 0);
+}
+
+.selected_option .filled_bar {
+    background-color: rgb(155, 0, 0);
+    
+}
+
+.reveal_percentages .filled_bar {
+    display: block;
+    animation-name: expandWidth;
+    animation-duration: 2s;
+}
+
+.vertical_center {
+    margin-top: 50vh;
+}
+
+/*loading sign*/
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
